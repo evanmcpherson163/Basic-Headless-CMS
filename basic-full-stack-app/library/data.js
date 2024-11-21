@@ -26,7 +26,7 @@ export async function getSortedList(){
     }
     //convert string from file into json array object
     //const jsonObj = JSON.parse(jsonString);
-    const jsonObj = JSON.parse(jsonString.post_content);
+    const jsonObj = JSON.parse(jsonString.body);
 
     //sort json array by name property
     jsonObj.sort(
@@ -53,14 +53,14 @@ export async function getAllIds(){
     let jsonString;
     try{
         jsonString = await got(dataURL);
-        console.log(jsonString.post_content);
+        console.log(jsonString.body);
     } catch(error){
         jsonString.post_content = [];
         console.log(error);
     }
     //convert string from file into json array object
     //const jsonObj = JSON.parse(jsonString);
-    const jsonObj = JSON.parse(jsonString.post_content);
+    const jsonObj = JSON.parse(jsonString.body);
     //use map() on array to extract just id + name properties into new array of obj values
     return jsonObj.map(
         function(item){
@@ -82,14 +82,14 @@ export async function getData(idRequested){
     let jsonString;
     try{
         jsonString = await got(dataURL);
-        console.log(jsonString.post_content);
+        console.log(jsonString.body);
     } catch(error){
         jsonString.body = [];
         console.log(error);
     }
     //convert string from file into json array object
     //const jsonObj = JSON.parse(jsonString);
-    const jsonObj = JSON.parse(jsonString.post_content);
+    const jsonObj = JSON.parse(jsonString.body);
     // find object value in array that has matching id
     const objMatch = jsonObj.filter(
         function(obj) {
