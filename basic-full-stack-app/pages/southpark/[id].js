@@ -27,7 +27,6 @@ export default function Entry( { itemData } ) {
             <article className="card col-6"> 
                 <div className="card-body">
                     <h5 className="card-title">{itemData.name}</h5>
-                    <h6 className="card-subtitle mb-2">Voiced by:{itemData.voice}</h6>
                     <p className="card-text">{itemData.hair}</p>
                     <p className="card-text">{itemData.grade}</p>
                 </div>

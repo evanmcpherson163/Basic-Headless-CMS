@@ -53,7 +53,7 @@ export async function getAllIds(){
     let jsonString;
     try{
         jsonString = await got(dataURL);
-        console.log(jsonString.body);
+        //console.log(jsonString.body);
     } catch(error){
         jsonString.post_content = [];
         console.log(error);
@@ -82,7 +82,7 @@ export async function getData(idRequested){
     let jsonString;
     try{
         jsonString = await got(dataURL);
-        console.log(jsonString.body);
+        //console.log(jsonString.body);
     } catch(error){
         jsonString.body = [];
         console.log(error);

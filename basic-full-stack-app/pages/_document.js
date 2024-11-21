@@ -6,7 +6,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <Link href = "/familyguy" className = "btn btn-primary mt-3">Family Guy Characters</Link>
         <Link href = "/" className = "btn btn-primary mt-3">Back to Home</Link>
         <Main />
         <NextScript />
