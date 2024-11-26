@@ -6,7 +6,7 @@ import got from 'got';
 
 // const dataDirectory = path.join( process.cwd(), 'data' );
 
-const dataURL = "https://dev-headless-cms-powered-app.pantheonsite.io/wp-json/twentytwentyone-child/v1/latest-posts/1";
+const dataURL = "https://dev-headless-cms-powered-app.pantheonsite.io/wp-json/twentytwentyone-child/v1/special";
 
 
 
@@ -17,9 +17,9 @@ export async function getSortedList(){
     //const jsonString = fs.readFileSync(filePath , 'utf8');
     let jsonString;
     try{
-        console.log(dataURL);
+        //console.log(dataURL);
         jsonString = await got(dataURL);
-        console.log(jsonString);
+        //console.log(jsonString);
     } catch(error){
         jsonString = {body: ""};
         console.log(error);

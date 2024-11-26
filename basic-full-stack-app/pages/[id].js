@@ -1,6 +1,6 @@
 // import Layout
-import Layout from '../../components/layout';
-import { getAllIds, getData} from "../../library/data";
+import Layout from '/components/layout';
+import { getAllIds, getData} from "/library/data";
 // any file name enclosed in [] expects to see both getStaticProps() and getStaticPaths() named exactly as shown
 // define a getStaticProps() function to have next.js retreive data to use for the dynamic page - this name is defined by next.js
 export async function getStaticProps( { params } ){
@@ -26,9 +26,9 @@ export default function Entry( { itemData } ) {
         <Layout>
             <article className="card col-6"> 
                 <div className="card-body">
-                    <h5 className="card-title">{itemData.name}</h5>
-                    <p className="card-text">{itemData.hair}</p>
-                    <p className="card-text">{itemData.grade}</p>
+                    <h5 className="card-title">{itemData.post_title}</h5>
+                    <h6 className="card-text">{itemData.user_login}</h6>
+                    <div className="card-text" dangerouslySetInnerHTML={{__html: itemData.post_content}} />
                 </div>
             </article>  
         </Layout>
